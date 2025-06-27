@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарифи | Вічна пам'ять</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tariffs.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+  <header class="header">
+    <a href="/index.html" class="header__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+    <div class="header__container">
+      <a href="/about.html">Про нас</a>
+      <a href="/demo.html">Демонстрація</a>
+      <a href="/tariffs.html">Тарифи</a>
+      <a href="contacts.html">Контакти</a>
+    </div>
+    <a href="#" class="btn btn--primary consult-trigger">Консультація</a>
+    <a href="#" class="menu"><img src="/assets/images/menu.png" alt="menu"></a>
+  </header>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__content">
+      <a href="/index.html" class="mobile-menu__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+      <button class="mobile-menu__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <ul>
+          <li><a href="">Про нас</a></li>
+          <li><a href="/demo.html">Демонстрація</a></li>
+          <li><a href="/tariffs.html">Тарифи</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn--primary consult-trigger">Консультація</a>
+    </div>
+    <div class="mobile-menu__overlay"></div>
+  </div>
+
+  <main>
+    <section class="price">
+      <h2>Оберіть, як довго житиме пам'ять</h2>
+      <div class="container">
+        <article class="price__card">
+          <div class="price__card--content">
+            <div class="price__card--text">
+              <h3>500 ₴</h3>
+              <p>1 рік</p>
+            </div>
+            <div class="price__card--text">
+              <h5>Сторінка доступна <br> 12 місяців</h5>
+            </div>
+            <div class="price__card--text">
+              <p></p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--outline consult-trigger">Оформити підписку</a>
+        </article>
+        <article class="price__card">
+          <div class="price__card--content">
+            <div class="price__card--text">
+              <h3>1 200 ₴</h3>
+              <p>3 роки</p>
+            </div>
+            <div class="price__card--text">
+              <h5>Тривала пам'ять <br> без зайвих платежів</h5>
+            </div>
+            <div class="price__card--text">
+              <p>При оплаті тарифу надішлемо <br> 2 qr-коди службою доставки <br> на вашу адресу</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--outline consult-trigger">Оформити підписку</a>
+        </article>
+        <article class="price__card">
+          <div class="price__card--content">
+            <div class="price__card--text">
+              <h3>3 000 ₴</h3>
+              <p>10 років</p>
+            </div>
+            <div class="price__card--text">
+              <h5>Десятиліття <br> спогадів</h5>
+            </div>
+            <div class="price__card--text">
+              <p>При оплаті тарифу надішлемо <br> 2 qr-коди службою доставки <br> на вашу адресу</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--outline consult-trigger">Оформити підписку</a>
+        </article>
+        <article class="price__card">
+          <div class="price__card--content">
+            <div class="price__card--text">
+              <h3>10 000 ₴</h3>
+              <p>Вічність</p>
+            </div>
+            <div class="price__card--text">
+              <h5>Сторінка залишиться <br> назавжди</h5>
+            </div>
+            <div class="price__card--text">
+              <p>При оплаті тарифу надішлемо <br> 2 qr-коди службою доставки <br> на вашу адресу</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--outline consult-trigger">Оформити підписку</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <a href="#" class="footer__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+      <div class="footer__container">
+        <a href="/about.html">Про нас</a>
+        <a href="/demo.html">Демонстрація</a>
+        <a href="/tariffs.html">Тарифи</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+      <a href="#" class="btn btn--primary consult-trigger">Отримати консультацію</a>
+    </div>
+    <p>© Вічна Пам'ять – цифровий пам'ятник для тих, кого неможливо забути</p>
+  </footer>
+
+  <!-- Popup Consultation -->
+  <div class="popup-consultation" id="popupConsultation">
+    <div class="popup-consultation__overlay"></div>
+    <div class="popup-consultation__window">
+      <button class="popup-consultation__close" id="popupConsultationClose" aria-label="Закрити">&times;</button>
+      <form class="popup-consultation__form" id="popupConsultationForm" novalidate>
+        <h3 class="popup-consultation__title">Консультація</h3>
+        <input type="text" name="name" id="consultName" required autocomplete="off" placeholder="Ім’я*">
+        <span class="popup-consultation__error" id="consultNameError"></span>
+        <input type="tel" name="phone" id="consultPhone" required autocomplete="off" placeholder="Телефон*">
+        <span class="popup-consultation__error" id="consultPhoneError"></span>
+        <textarea name="comment" id="consultComment" rows="3" placeholder="Коментар"></textarea>
+        <button type="submit" class="btn btn--primary popup-consultation__submit">Надіслати заявку</button>
+      </form>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

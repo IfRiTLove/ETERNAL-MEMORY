@@ -1,0 +1,112 @@
+// Стили для попапа консультації
+.popup-consultation {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    transition: opacity 0.3s;
+    opacity: 1;
+  }
+
+  &__window {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 32px 24px 24px 24px;
+    min-width: 320px;
+    max-width: 90vw;
+    width: 100%;
+    max-width: 400px;
+    transform: scale(0.92);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
+  }
+  &.active &__window {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+    &:hover {
+      color: #222;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    label {
+      font-size: 1rem;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    input,
+    textarea {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+      resize: none;
+      &:focus {
+        border: 1.5px solid #b6b6b6;
+      }
+    }
+    .btn--primary {
+      margin-top: 8px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  &__error {
+    color: #d32f2f;
+    font-size: 0.92em;
+    min-height: 18px;
+    margin-top: 2px;
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    &__window {
+      padding: 20px 8px 16px 8px;
+      min-width: 0;
+      max-width: 98vw;
+    }
+  }
+}

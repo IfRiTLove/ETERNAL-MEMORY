@@ -1,0 +1,32 @@
+// Основной файл стилей, импортирующий все прочие файлы
+
+// Импорт переменных и миксинов
+@import "variables";
+@import "mixins";
+
+// Импорт базовых стилей
+@import "base";
+
+// Импорт компонентов
+@import "components";
+@import "mobile-menu";
+
+// Импорт шапки сайта
+@import "header"; 
+
+// Импорт страниц
+@import "home";
+@import "demo";
+
+// Импорт тарифов
+@import "contacts";
+@import "about";
+
+// Импорт футера
+@import "footer";
+
+// Импорт медиа-запросов
+@import "media";
+
+// Импорт стилей попапа
+@import "popup-consultation";

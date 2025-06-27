@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про нас | Вічна пам'ять</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/about.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+  <header class="header">
+    <a href="/index.html" class="header__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+    <div class="header__container">
+      <a href="/about.html">Про нас</a>
+      <a href="/demo.html">Демонстрація</a>
+      <a href="/tariffs.html">Тарифи</a>
+      <a href="">Контакти</a>
+    </div>
+    <a href="#" class="btn btn--primary consult-trigger">Консультація</a>
+    <a href="#" class="menu"><img src="/assets/images/menu.png" alt="menu"></a>
+  </header>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__content">
+      <a href="/index.html" class="mobile-menu__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+      <button class="mobile-menu__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <nav class="mobile-menu__nav">
+        <ul>
+          <li><a href="/index.html">Про нас</a></li>
+          <li><a href="/demo.html">Демонстрація</a></li>
+          <li><a href="/tariffs.html">Тарифи</a></li>
+          <li><a href="">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn--primary consult-trigger">Консультація</a>
+    </div>
+    <div class="mobile-menu__overlay"></div>
+  </div>
+
+
+
+  <main class="main">
+    <section class="contacts">
+      <div class="container">
+        <h1 class="contacts__title">Контакти</h1>
+        <p class="contacts__desc">
+          Зв’яжіться з нами зручним для вас способом. Ми завжди відкриті до спілкування та готові відповісти на ваші
+          питання.
+        </p>
+        <div class="contacts__content">
+          <div class="contacts__info">
+            <h2 class="contacts__subtitle">Контактна інформація</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item"><span class="contacts__label">Адреса:</span> м. Київ, вул. Прикладна, 1</li>
+              <li class="contacts__item"><span class="contacts__label">Телефон:</span> <a href="tel:+380991234567"
+                  class="contacts__link">+38 (099) 123-45-67</a></li>
+              <li class="contacts__item"><span class="contacts__label">Email:</span> <a
+                  href="mailto:info@vechnaya-pamyat.ua" class="contacts__link">info@vechnaya-pamyat.ua</a></li>
+            </ul>
+            <div class="contacts__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.9999999999995!2d30.5234!3d50.4501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5c7a0b1b1b%3A0x0!2z0JrQvtC80L7QvdCw0Y8g0J_QvtC70YzQutCw!5e0!3m2!1suk!2sua!4v1680000000000!5m2!1suk!2sua"
+                width="100%" height="220" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <form class="contacts__form form" autocomplete="off">
+            <h2 class="form__title">Напишіть нам</h2>
+            <div class="form__group">
+              <input type="text" name="name" class="form__input" placeholder="Ім’я" required>
+            </div>
+            <div class="form__group">
+              <input type="email" name="email" class="form__input" placeholder="Email" required>
+            </div>
+            <div class="form__group">
+              <textarea name="message" class="form__input form__textarea" placeholder="Ваше повідомлення"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form__btn">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <footer class="footer">
+    <div class="wrapper">
+      <a href="#" class="footer__logo">ВІЧНА <span>ПАМ'ЯТЬ</span></a>
+      <div class="footer__container">
+        <a href="/about.html">Про нас</a>
+        <a href="/demo.html">Демонстрація</a>
+        <a href="/tariffs.html">Тарифи</a>
+        <a href="">Контакти</a>
+      </div>
+      <a href="#" class="btn btn--primary consult-trigger">Отримати консультацію</a>
+    </div>
+    <p>© Вічна Пам'ять – цифровий пам'ятник для тих, кого неможливо забути</p>
+  </footer>
+  <!-- Popup Consultation -->
+  <div class="popup-consultation" id="popupConsultation">
+    <div class="popup-consultation__overlay"></div>
+    <div class="popup-consultation__window">
+      <button class="popup-consultation__close" id="popupConsultationClose" aria-label="Закрити">&times;</button>
+      <form class="popup-consultation__form" id="popupConsultationForm" novalidate>
+        <h3 class="popup-consultation__title">Консультація</h3>
+        <input type="text" name="name" id="consultName" required autocomplete="off" placeholder="Ім’я*">
+        <span class="popup-consultation__error" id="consultNameError"></span>
+        <input type="tel" name="phone" id="consultPhone" required autocomplete="off" placeholder="Телефон*">
+        <span class="popup-consultation__error" id="consultPhoneError"></span>
+        <textarea name="comment" id="consultComment" rows="3" placeholder="Коментар"></textarea>
+        <button type="submit" class="btn btn--primary popup-consultation__submit">Надіслати заявку</button>
+      </form>
+    </div>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

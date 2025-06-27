@@ -1,0 +1,273 @@
+// Базовые стили для сайта
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+// Общие стили
+html {
+  box-sizing: border-box;
+  font-size: $font-size-base;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 1rem;
+  line-height: $line-height-base;
+  color: $color-dark;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: $color-bg-main;
+}
+
+// Типографика
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 3.75rem;
+  color: $color-light;
+
+  // @include lg {
+  //   font-size: 2.25rem;
+  // }
+
+  // @include md {
+  //   font-size: 2rem;
+  // }
+}
+
+h2 {
+  font-size: 3.125rem;
+  font-weight: 600;
+
+  // @include lg {
+  //   font-size: 1.75rem;
+  // }
+
+  // @include md {
+  //   font-size: 1.5rem;
+  // }
+}
+
+h3 {
+  font-size: 2.875rem;
+
+  // @include md {
+  //   font-size: 1.35rem;
+  // }
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  font-family: "roboto", sans-serif;
+
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: $transition-base;
+
+ }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+// Формы
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+// Изображения
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Утилитарные классы
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+
+  @include xl {
+    max-width: 1140px;
+  }
+
+  @include lg {
+    max-width: 960px;
+  }
+
+  @include md {
+    max-width: 720px;
+  }
+
+  @include sm {
+    max-width: 540px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+// Утилиты для отступов
+@for $i from 0 through 35 {
+  $value: $i * 0.25rem;
+  $value-p: $i * 0.25rem;
+
+
+  @if $i ==1 {
+    $value-p: 0.875rem;
+  }
+
+  @else if $i ==2 {
+    $value-p: 1.125rem;
+  }
+
+  @else if $i ==3 {
+    $value-p: 1.25rem;
+  }
+
+  .par-#{$i} {
+    font-size: $value-p;
+  }
+
+  .m-#{$i} {
+    margin: $value;
+  }
+
+  .mt-#{$i} {
+    margin-top: $value;
+  }
+
+  .mr-#{$i} {
+    margin-right: $value;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$i} {
+    margin-left: $value;
+  }
+
+  .mx-#{$i} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$i} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .pt-#{$i} {
+    padding-top: $value;
+  }
+
+  .pr-#{$i} {
+    padding-right: $value;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$i} {
+    padding-left: $value;
+  }
+
+  .px-#{$i} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$i} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}

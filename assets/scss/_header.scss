@@ -1,0 +1,68 @@
+.header {
+  @include flex(row, nowrap, space-between, center, 0);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  &__logo {
+    @include size(100%, 100%);
+    max-width: fit-content;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 100%;
+    color: $color-dark;
+    text-decoration: none;
+
+    span {
+      color: $color-yellow;
+    }
+  }
+
+  &__container {
+    @include flex(row, nowrap, normal, start, 30px);
+
+    a {
+      font-weight: 500;
+      color: $color-dark;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 185px;
+
+    @include lg {
+      margin-left: auto;
+      margin-right: 50px;
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: $color-yellow;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: rgb(179, 149, 52);
+    }
+
+    @include lg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
